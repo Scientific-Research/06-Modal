@@ -1,7 +1,13 @@
 'use strict';
 
-const showModal = document.querySelector('.show-modal');
+const showWindow = document.querySelector('.show-modal');
+const modal = document.querySelector('.modal');
+const closeWindow = document.querySelector('.close-modal');
 
-showModal.addEventListener('click', () => {
-  console.log('Hallo');
+showWindow.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+closeWindow.addEventListener('click', () => {
+  modal.style.display = 'none';
 });
