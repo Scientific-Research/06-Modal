@@ -44,6 +44,13 @@ document.addEventListener('click', event => {
   }
 });
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+  }
+});
+
 buttonWindow(showWindow);
 // buttonWindow(showWindow_2);
 // buttonWindow(showWindow_3);
