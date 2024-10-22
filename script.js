@@ -27,10 +27,22 @@ const buttonWindow = showWindow => {
         overlay.style.display = 'block';
       } else {
         modal.style.display = 'none';
+        overlay.style.display = 'none';
       }
     });
   }
 };
+
+// close modal when clicking outside of it!
+document.addEventListener('click', event => {
+  if (
+    !modal.contains(event.target) &&
+    !showWindow.some(button => button.contains(event.target))
+  ) {
+    modal.style.display = 'none';
+    overlay.style.display = 'none';
+  }
+});
 
 buttonWindow(showWindow);
 // buttonWindow(showWindow_2);
